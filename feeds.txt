@@ -19,7 +19,6 @@ https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/m
 https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/master/ips/ips0.list 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/bitcoin_nodes.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/botscout.ipset 
-https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/coinbl_hosts.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cybercrime.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/darklist_de.netset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam.ipset 
