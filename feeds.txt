@@ -34,7 +34,6 @@ https://talosintelligence.com/documents/ip-blacklist
 https://threatshare.io/feed 
 https://urlhaus.abuse.ch/downloads/csv_recent/ 
 https://us-proxy.org 
-https://www.binarydefense.com/banlist.txt 
 https://www.darklist.de/raw.php 
 https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt 
 https://www.socks-proxy.net 
