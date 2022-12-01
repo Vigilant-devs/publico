@@ -19,7 +19,6 @@ https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/m
 https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/Ultimate.Hosts.Blacklist/master/ips/ips0.list 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/bitcoin_nodes.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/botscout.ipset 
-https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/coinbl_hosts.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/cybercrime.ipset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/darklist_de.netset 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/stopforumspam.ipset 
@@ -35,7 +34,6 @@ https://talosintelligence.com/documents/ip-blacklist
 https://threatshare.io/feed 
 https://urlhaus.abuse.ch/downloads/csv_recent/ 
 https://us-proxy.org 
-https://www.binarydefense.com/banlist.txt 
 https://www.darklist.de/raw.php 
 https://www.myip.ms/files/blacklist/csf/latest_blacklist.txt 
 https://www.socks-proxy.net 
