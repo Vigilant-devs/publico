@@ -55,7 +55,6 @@ http://www.joewein.net/dl/bl/dom-bl.txt
 http://www.threatcrowd.org/feeds/domains.txt 
 https://phishing.army/download/phishing_army_blocklist_extended.txt 
 https://quttera.com/lists/malicious 
-https://threatfox.abuse.ch/downloads/hostfile/ 
 https://threatshare.io/feed 
 https://urlhaus.abuse.ch/downloads/csv 
 https://www.dshield.org/feeds/suspiciousdomains_Low.txt 
