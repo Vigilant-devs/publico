@@ -23,17 +23,17 @@
 !define VERSION "4.3.10"
 !define REVISION "40323"
 !define NAME "Vigilant"
-!define SERVICE "VigilantSvc"
+!define SERVICE "WazuhSvc"
 
 ; output file
 !ifndef OutFile
-    !define OutFile "vigilant-agent-${VERSION}.exe"
+    !define OutFile "wazuh-agent-${VERSION}.exe"
 !endif
 
 Var is_upgrade
 
-Name "${NAME} Vigilant Agent v${VERSION}"
-BrandingText "Copyright (C) 2023, Vigilant Inc."
+Name "${NAME} Windows Agent v${VERSION}"
+BrandingText "Copyright (C) 2015, Wazuh Inc."
 OutFile "${OutFile}"
 
 VIProductVersion "4.0.0.0"
@@ -238,10 +238,10 @@ Section "Wazuh Agent (required)" MainSec
     WriteRegStr HKLM SOFTWARE\ossec "Install_Dir" "$INSTDIR"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayName" "${NAME} Agent"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayVersion" "${VERSION}"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "Publisher" "Vigilant, Inc."
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "Publisher" "Wazuh, Inc."
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayIcon" '"$INSTDIR\favicon.ico"'
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "HelpLink" "https://vigilant.com.br"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "URLInfoAbout" "https://vigilant.com.br"
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "HelpLink" "https://wazuh.com"
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "URLInfoAbout" "https://wazuh.com"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "UninstallString" '"$INSTDIR\uninstall.exe"'
     ${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
     IntFmt $0 "0x%08X" $0
@@ -333,7 +333,7 @@ Section "Wazuh Agent (required)" MainSec
 
     ; create shortcuts
     CreateDirectory "$SMPROGRAMS\OSSEC"
-    CreateShortCut "$SMPROGRAMS\OSSEC\Vigilant Agent.lnk" "$INSTDIR\win32ui.exe" "" "$INSTDIR\win32ui.exe" 0
+    CreateShortCut "$SMPROGRAMS\OSSEC\Manage Agent.lnk" "$INSTDIR\win32ui.exe" "" "$INSTDIR\win32ui.exe" 0
     CreateShortCut "$SMPROGRAMS\OSSEC\Documentation.lnk" "$INSTDIR\doc.html" "" "$INSTDIR\doc.html" 0
     CreateShortCut "$SMPROGRAMS\OSSEC\Edit Config.lnk" "$INSTDIR\ossec.conf" "" "$INSTDIR\ossec.conf" 0
     CreateShortCut "$SMPROGRAMS\OSSEC\Uninstall.lnk" "$INSTDIR\uninstall.exe" "" "$INSTDIR\uninstall.exe" 0
