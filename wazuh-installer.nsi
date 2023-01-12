@@ -20,30 +20,30 @@
 ; general
 !define MUI_ICON install.ico
 !define MUI_UNICON uninstall.ico
-!define VERSION "4.3.3"
-!define REVISION "40315"
-!define NAME "Wazuh"
-!define SERVICE "WazuhSvc"
+!define VERSION "4.3.10"
+!define REVISION "40323"
+!define NAME "Vigilant"
+!define SERVICE "VigilantSvc"
 
 ; output file
 !ifndef OutFile
-    !define OutFile "wazuh-agent-${VERSION}.exe"
+    !define OutFile "vigilant-agent-${VERSION}.exe"
 !endif
 
 Var is_upgrade
 
-Name "${NAME} Windows Agent v${VERSION}"
-BrandingText "Copyright (C) 2015, Wazuh Inc."
+Name "${NAME} Vigilant Agent v${VERSION}"
+BrandingText "Copyright (C) 2023, Vigilant Inc."
 OutFile "${OutFile}"
 
 VIProductVersion "4.0.0.0"
 VIAddVersionKey ProductName "${NAME}"
-VIAddVersionKey CompanyName "Wazuh Inc."
-VIAddVersionKey LegalCopyright "2022 - Wazuh Inc."
-VIAddVersionKey FileDescription "Wazuh Agent installer"
+VIAddVersionKey CompanyName "Vigilant Inc."
+VIAddVersionKey LegalCopyright "2023 - Vigilant Inc."
+VIAddVersionKey FileDescription "Vigilant Agent installer"
 VIAddVersionKey FileVersion "${VERSION}"
 VIAddVersionKey ProductVersion "${VERSION}"
-VIAddVersionKey InternalName "Wazuh Agent"
+VIAddVersionKey InternalName "Vigilant Agent"
 VIAddVersionKey OriginalFilename "${OutFile}"
 
 InstallDir "$PROGRAMFILES\ossec-agent"
@@ -219,7 +219,6 @@ Section "Wazuh Agent (required)" MainSec
     File /oname=sysinfo.dll ..\data_provider\build\bin\sysinfo.dll
     File /oname=syscollector.dll ..\wazuh_modules\syscollector\build\bin\syscollector.dll
     File /oname=queue\syscollector\norm_config.json ..\wazuh_modules\syscollector\norm_config.json
-    File /oname=ruleset\sca\sca_win_audit.yml ..\..\ruleset\sca\windows\sca_win_audit.yml
     File VERSION
     File REVISION
 
@@ -239,10 +238,10 @@ Section "Wazuh Agent (required)" MainSec
     WriteRegStr HKLM SOFTWARE\ossec "Install_Dir" "$INSTDIR"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayName" "${NAME} Agent"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayVersion" "${VERSION}"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "Publisher" "Wazuh, Inc."
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "Publisher" "Vigilant, Inc."
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "DisplayIcon" '"$INSTDIR\favicon.ico"'
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "HelpLink" "https://wazuh.com"
-    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "URLInfoAbout" "https://wazuh.com"
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "HelpLink" "https://vigilant.com.br"
+    WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "URLInfoAbout" "https://vigilant.com.br"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OSSEC" "UninstallString" '"$INSTDIR\uninstall.exe"'
     ${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
     IntFmt $0 "0x%08X" $0
