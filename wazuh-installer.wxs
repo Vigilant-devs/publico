@@ -558,7 +558,7 @@
                 <RemoveFolder Id="purgue_shared_dir" On="uninstall" />
             </Component>
         </DirectoryRef>
-        <Feature Id="MainFeature" Title="Vigilant Agent" Description="Install the Vigilant Agent program files" ConfigurableDirectory="APPLICATIONFOLDER" InstallDefault="local" TypicalDefault="install" AllowAdvertise="no" Absent="disallow">
+        <Feature Id="MainFeature" Title="Wazuh Agent" Description="Install the Vigilant Agent program files" ConfigurableDirectory="APPLICATIONFOLDER" InstallDefault="local" TypicalDefault="install" AllowAdvertise="no" Absent="disallow">
             <ComponentRef Id="REGISTRY_INSTALL_DIR" />
             <ComponentRef Id="AGENT_AUTH.EXE" />
             <ComponentRef Id="SYSCOLLECTOR_NORM_CONFIG" />
